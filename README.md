@@ -13,19 +13,19 @@ wordpress
 ├── charts                       #charts目录存放依赖的chart
 └── answers.yaml                 #配置键值对形式的参数
     ├── Chart.yaml               #包含chart信息的YAML文件
-    ├── README.md 				 #可选：chart的介绍信息等
-    ├── app-readme.md		     #可选：Rancher应用商店页面中app描述信息。
-    ├── requirements.yaml		 #可选：列举当前chart的需要依赖的Chart
-    ├── questions.yaml		     #可选：Rancher应用商店图形化配置交互
-    ├── templates				 #存放chart所有的K8s资源定义模板
-    │   ├── deployment.yaml		 #kubernetes deployment模版
-    │   ├── ingress.yaml		 #kubernetes ingress模版
+    ├── README.md                #可选：chart的介绍信息等
+    ├── app-readme.md            #可选：Rancher应用商店页面中app描述信息。
+    ├── requirements.yaml        #可选：列举当前chart的需要依赖的Chart
+    ├── questions.yaml           #可选：Rancher应用商店图形化配置交互
+    ├── templates                #存放chart所有的K8s资源定义模板
+    │   ├── deployment.yaml      #kubernetes deployment模版
+    │   ├── ingress.yaml         #kubernetes ingress模版
     │   ├── secrets.yaml         #kubernetes secrets模版
     │   ├── configmap.yaml       #kubernetes configmap模版
     │   ├── pvc.yaml             #kubernetes PersistentVolumeClaims模版
-    │   ├── NOTES.txt			 #部署chart后输出的帮助文档
-    │   └── service.yaml		 #kubernetes service模版
-    └── values.yaml				 #当前 Chart 的默认配置的值
+    │   ├── NOTES.txt            #部署chart后输出的帮助文档
+    │   └── service.yaml         #kubernetes service模版
+    └── values.yaml              #当前 Chart 的默认配置的值
 ```
 
 ## 编写一个简单的Helm Chart示例
@@ -34,9 +34,9 @@ wordpress
 1、Chart.yaml 文件是 一个 chart 必要文件， 该文件可以简单包括以下字段;
 
 ```yaml
-apiVersion: v1	                       #chart的API版本, 总是"v1",[必选]
-name: wordpress		                   #chart的名称,[必选]
-version: 2.1.12  	                   #chart的版本，这个版本必须必要遵循SemVer 2标准,[必选]
+apiVersion: v1                         #chart的API版本, 总是"v1",[必选]
+name: wordpress                        #chart的名称,[必选]
+version: 2.1.12                        #chart的版本，这个版本必须必要遵循SemVer 2标准,[必选]
 kubeVersion: 1.15.3                    #kubernetes的版本,遵循SemVer标准,[可选]
 description: helm chart for mysql      #chart模板的简介描述,[可选]
 keywords:                              #关于此项目关键字列表,[可选]
@@ -47,9 +47,9 @@ keywords:                              #关于此项目关键字列表,[可选]
   - web
   - application
   - php
-home: https://github.com/WalkCloud	          #此项目的URL主页地址,[可选]
+home: https://github.com/WalkCloud            #此项目的URL主页地址,[可选]
 sources: https://github.com/WalkCloud/sources #此项目源代码的URL地址,[可选]
-icon: https://github.com/WalkCloud/xxx.png	  #此项目图标路径：SVG或者png格式,[可选]
+icon: https://github.com/WalkCloud/xxx.png    #此项目图标路径：SVG或者png格式,[可选]
 maintainers:                                  #维护人员信息,[可选]
   - email: hongyu@rancher.com                 #维护人员邮箱,[可选]      
     name: kevin lee                           #维护人员姓名,[可选]
