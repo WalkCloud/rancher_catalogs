@@ -55,7 +55,7 @@ maintainers:                                  #维护人员信息,[可选]
     name: kevin lee                           #维护人员姓名,[可选]
     url: http://kevin.WalkCloud.com           #维护人员网址,[可选]
 engine: gotpl                                 #模板引擎,[可选, 默认gotpl]
-appVersion: 4.9.8                           #此包含的应用程序的版本
+appVersion: 4.9.8                             #此包含的应用程序的版本
 tillerVersion: 2.14.3                         #此版本需要请求的tiller的版本,[可选]
 ```
 ### valus.yaml文件编写
@@ -75,8 +75,8 @@ statefulset:                       #配置statefulset有状态的应用负载
   enabled: false                   #statefulset关闭
 image:                             #用于配置kubernetes容器镜像，
   registry: private.harbor.com     #配置私有的image仓库地址，默认docker.io
-  repository: bitnami/wordpress                #image名称，例如：nginx镜像
-  tag: 4.9.8-debian-9                     #image tag
+  repository: bitnami/wordpress    #image名称，例如：nginx镜像
+  tag: 4.9.8-debian-9              #image tag
   pullPolicy: IfNotPresent         #pull镜像的方式
 service:                           #用于修改kubernetes Service
   type: ClusterIP                  #Service访问类型.
