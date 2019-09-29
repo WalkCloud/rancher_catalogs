@@ -11,7 +11,7 @@ Helm的打包格式叫做chart，所谓chart就是一系列文件, 它描述了�
 ```yaml
 wordpress
 ├── charts                       #charts目录存放依赖的chart
-├── answers.yaml                 #配置键值对形式的参数
+└── answers.yaml                 #配置键值对形式的参数
     ├── Chart.yaml               #包含chart信息的YAML文件
     ├── README.md 				 #可选：chart的介绍信息等
     ├── app-readme.md		     #可选：Rancher应用商店页面中app描述信息。
@@ -23,9 +23,9 @@ wordpress
     │   ├── secrets.yaml         #kubernetes secrets模版
     │   ├── configmap.yaml       #kubernetes configmap模版
     │   ├── pvc.yaml             #kubernetes PersistentVolumeClaims模版
-    │   ├── NOTES.txt			     #部署chart后输出的帮助文档
-    │   └── service.yaml		     #kubernetes service模版
-    └── values.yaml				     #当前 Chart 的默认配置的值
+    │   ├── NOTES.txt			 #部署chart后输出的帮助文档
+    │   └── service.yaml		 #kubernetes service模版
+    └── values.yaml				 #当前 Chart 的默认配置的值
 ```
 
 ## 编写一个简单的Helm Chart示例
