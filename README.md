@@ -207,7 +207,7 @@ questions:
 ```
 ### answers.yaml文件编写
 当部署一个原生的Helm charts时，需要通过Answers配置键值对形式的参数
-```
+```yaml
 defaultImage: true
 image.repository: bitnami/wordpress
 image.tag: 4.9.8-debian-9
@@ -277,7 +277,7 @@ spec:
 {{ toYaml . | indent 8 }}
     {{- end }}
 ```
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
